@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BizPal</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="/Dashboard/other-pages/layout.css">
+  <script src="/Dashboard/other-pages/layout.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="side-container">
+      <!-- Left Sidebar -->
+      <aside class="sidebar1">
+        <div class="nickname">
+          <div class="icon-wrapper">
+            <span class="initials">CE</span>
+          </div>
+        </div>
+        <div class="shop-name">
+          <h1>Chidi's</h1>
+          <p>Electronics</p>
+        </div>
+      </aside>
+
+      <!-- Left Sidebar -->
+      <aside class="sidebar2">
+        <nav>
+          <ul class="nav-links">
+            <li class="dashboard">
+              <a class="other-link" href="/Dashboard/dashboard.html">
+                <img src="Layout icons/Dashboard.svg" alt="Dashboard icon" />
+                Dashboard
+              </a>
+            </li>
+            <li>
+              <a class="other-link" href="/Dashboard/other-pages/customer.html">
+                <img src="Layout icons/Customer.svg" alt="Customers icon" />
+                Customers
+              </a>
+            </li>
+            <li>
+              <a class="other-link" href="/Dashboard/other-pages/leads.html">
+                <img src="Layout icons/Lead.svg" alt="Lead Pipeline icon" />
+                Lead Pipeline
+              </a>
+            </li>
+              <li>
+              <a class="other-link" href="/Dashboard/other-pages/notes.html">
+                <img class="note-icon" src="Layout icons/notes.svg" alt="Lead Pipeline icon" />
+               Notes
+              </a>
+            </li>
+            <li>
+              <a class="other-link" href="/Dashboard/other-pages/followups.html">
+                <img src="Layout icons/Follow-ups.svg" alt="Follow-ups icon" />
+                Follow-ups
+              </a>
+            </li>
+            <li class="report">
+              <a class="main-link" href="/Dashboard/other-pages/reports.html">REPORTS</a>
+            </li>
+            <li>
+              <a class="other-link" href="/Dashboard/other-pages/analytics.html">
+                <img src="Layout icons/carbon_analytics.svg" alt="Analytics icon" />
+                Analytics
+              </a>
+            </li>
+            <li>
+              <a class="other-link" href="/Dashboard/other-pages/settings.html">
+                <img src="Layout icons/Settings.svg" alt="Settings icon" />
+                Settings
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- profile picture upload control -->
+        <input type="file" id="profile-upload" accept="image/*" hidden />
+        <label for="profile-upload" class="profile-button">
+          <div class="profile-pic">
+            <img id="profile-img" src="Layout icons/Ellipse 13.svg" alt="Profile Picture" />
+            <span id="profile-initial" class="initial">C</span>
+          </div>
+          <div class="profile-info">
+            <h4>Chidi Okafor</h4>
+            <p>Admin</p>
+          </div>
+        </label>
+      </aside>
+    </div>
+
+    <!-- Top Bar -->
+    <header class="topbar">
+      <div class="topbar-left">
+        <div class="follow-reminder">
+          <div class="ham">
+        <!-- <button class="hamburger" id="hamburger-btn">&#9776;</button> -->
+        
+        <h1>Good morning, Chidi 👋</h1>
+        </div>
+        <p>Here’s what’s happening at your shop today</p>
+        
+        </div>
+      </div>
+
+      <div class="topbar-right">
+        <div class="date-box">
+          <img src="Layout icons/Calendar.svg" alt="Calendar Icon" />
+          <span id="current-date">Friday, Jun 13 2026</span>
+        </div>
+      </div>
+    </header>
+
+
+
+    <!-- Main Content -->
+    <main class="main">
+        
+    </main>
+
+</div>
+
+<!-- <script>
+const hamburgerBtn = document.getElementById('hamburger-btn');
+const sideContainer = document.querySelector('.side-container');
+
+hamburgerBtn.addEventListener('click', () => {
+  // Toggle sidebar for ALL screen sizes
+  sideContainer.classList.toggle('hidden');
+});
+</script> -->
+</body>
+
+</html>

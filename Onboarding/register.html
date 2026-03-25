@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onboarding</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css"
+    />
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="Onboarding">
+        <aside>
+        <div class="aside-top">
+            <div class="logo">
+                <img src="icons/logo.svg" alt="">
+                <h1>BizPal</h1>
+            </div>
+            <h1>Your business, fully organized.</h1>
+            <p>Join thousands of Nigerian small business owners who use BizPal to track customers, manage leads and close more deal.</p>
+        </div>
+        <div class="aside-bottom">
+            <div class="features">
+                <i class="ph ph-users-three"></i>
+                <p>Add customer in 30 seconds</p>
+            </div>
+            <div class="features">
+                <i class="ph ph-chart-bar"></i>
+                <p>Visual lead pipeline tracker</p>
+            </div>
+            <div class="features">
+                <i class="ph ph-alarm"></i>
+                <p>Automatic follow-up reminders</p>
+            </div>
+            <div class="features">
+                <i class="ph ph-chart-line"></i>
+                <p>CRM analytics & PDF reports</p>
+            </div>
+        </div>
+    </aside>
+    <main>
+        <header class="topbar">
+            <h1>Create Your account</h1>
+            <div class="has-account">
+                <p>Already have an account?</p>
+                <a href="login.html">Log in</a>
+            </div>
+        </header>
+        <section class="form">
+            <form action="Create-Account">
+                <div class="user-details">
+                    <div class="name">
+                        <label for="text">Business Name</label>
+                        <input type="text" placeholder="Enter your business name">
+                    </div>
+                    <div class="name">
+                        <label for="text" id="text">Your Full Name</label>
+                        <input type="text" placeholder="Enter your full name">
+                    </div>
+                    <div class="name">
+                        <label for="email">Email Address</label>
+                        <input type="email" placeholder="Enter your email address">
+                    </div>
+                    <div class="name">
+                        <label for="number">Phone Number</label>
+                        <input type="number" placeholder="Enter your phone number" class="phone-number">
+                    </div>
+                </div>
+                <div class="password-field">
+                    <div class="password">
+                        <label for="password">Password</label>
+                        <input type="password" placeholder="Enter your password">
+                    </div>
+                    <div class="password">
+                        <label for="password">Confirm Password</label>
+                        <input type="password" placeholder="Enter your password again">
+                    </div>
+                    <div class="checkbox">
+                        <input type="checkbox">
+                        <p>I agree to <a href="">Terms of Service</a> and <a href="">Privacy Policy.</a></p>
+                    </div>
+                </div>
+                <div class="btn">
+                    <a href="successful.html" class="create-btn">Create My Account</a>
+                    <div class="line">
+                        <hr>
+                        <p>OR</p>
+                        <hr>
+                    </div>
+                    <button class="create-btn2">
+                        <img src="icons/google icon.svg" alt="">
+                        Continue with Google
+                    </button>
+                </div>
+            </form>
+        </section>
+    </main>
+    </div>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onboarding</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css"
+    />
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="Onboarding">
+        <aside>
+        <div class="aside-top">
+            <div class="logo">
+                <img src="icons/logo.svg" alt="">
+                <h1>BizPal</h1>
+            </div>
+            <h1>Good to have you back</h1>
+            <p>Your customers, leads and follow-ups are right where you left them</p>
+        </div>
+        <div class="aside-bottom">
+            <div class="features">
+                <i class="ph ph-lock"></i>
+                <p>Your data is encrypted and secure</p>
+            </div>
+            <div class="features">
+                <i class="ph ph-device-mobile"></i>
+                <p>Works on mobile and desktop</p>
+            </div>
+            <div class="features">
+                <i class="ph ph-flag"></i>
+                <p>Built for Nigerian business owners</p>
+            </div>
+        </div>
+    </aside>
+    <main>
+        <header class="topbar">
+            <h1>Welcome back!</h1>
+            <div class="has-account">
+                <p>Don’t have an account?</p>
+                <a href="/Onboarding/register.html">Sign up free</a>
+            </div>
+        </header>
+        <section class="form">
+            <form action="Login">
+                <div class="password-field">
+                    <div class="login-details">
+                        <label for="email">Email Address</label>
+                        <input type="email" placeholder="Enter your email address" class="login-input">
+                        <!-- <p>We’ll send a reset link to this email</p> -->
+                    </div>
+                    <div class="login-details">
+                        <label for="password">Password</label>
+                        <input type="password" placeholder="Enter your password" class="login-input">
+                        <a href="forgot-password.html">Forgot your password?</a>
+                    </div>
+                </div>
+                <div class="btn">
+                    <a href="/home-note/layout.html" class="create-btn">Log In to Bizpal</a>
+                    <div class="line">
+                        <hr>
+                        <p>OR</p>
+                        <hr>
+                    </div>
+                    <button class="create-btn2">
+                        <img src="icons/google icon.svg" alt="">
+                        Continue with Google
+                    </button>
+                </div>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
