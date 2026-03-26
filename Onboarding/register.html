@@ -55,30 +55,30 @@
             <form action="Create-Account">
                 <div class="user-details">
                     <div class="name">
-                        <label for="text">Business Name</label>
+                        <label for="text">Business Name (optional)</label>
                         <input type="text" placeholder="Enter your business name">
                     </div>
                     <div class="name">
                         <label for="text" id="text">Your Full Name</label>
-                        <input type="text" placeholder="Enter your full name">
+                        <input type="text" placeholder="Enter your full name" required>
                     </div>
                     <div class="name">
                         <label for="email">Email Address</label>
-                        <input type="email" placeholder="Enter your email address">
+                        <input type="email" placeholder="Enter your email address" required>
                     </div>
                     <div class="name">
                         <label for="number">Phone Number</label>
-                        <input type="number" placeholder="Enter your phone number" class="phone-number">
+                        <input type="number" placeholder="Enter your phone number" class="phone-number" required>
                     </div>
                 </div>
                 <div class="password-field">
                     <div class="password">
                         <label for="password">Password</label>
-                        <input type="password" placeholder="Enter your password">
+                        <input type="password" placeholder="Enter your password" required>
                     </div>
                     <div class="password">
                         <label for="password">Confirm Password</label>
-                        <input type="password" placeholder="Enter your password again">
+                        <input type="password" placeholder="Enter your password again" required>
                     </div>
                     <div class="checkbox">
                         <input type="checkbox">
@@ -86,7 +86,7 @@
                     </div>
                 </div>
                 <div class="btn">
-                    <a href="successful.html" class="create-btn">Create My Account</a>
+                    <button class="create-btn" type="submit">Create My Account</button>
                     <div class="line">
                         <hr>
                         <p>OR</p>
@@ -101,5 +101,6 @@
         </section>
     </main>
     </div>
+    <script src="./register.js" type="module"></script>
 </body>
 </html>
