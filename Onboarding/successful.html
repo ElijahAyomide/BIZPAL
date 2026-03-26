@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Onboarding</title>
+    <title>Account created successfully!</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link
       rel="stylesheet"
@@ -11,6 +11,7 @@
       href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css"
     />
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="./../assets/logo.png">
     <script src="script.js" defer></script>
 </head>
 <body>
@@ -52,17 +53,24 @@
             <img src="icons/success.svg" alt="">
             <h1>Account created successfully!</h1>
             <div class="has-account">
-                <p class="success-text">Welcome to BizPal, Chidi. Your account for Chidi’s Electronics is ready. Let’s set you up your first customer</p>
+                <p class="success-text">Welcome to BizPal, <span id="username"></span>. Your account for <span id="businessName"></span> is ready. Let's set you up your first customer</p>
                 <!-- <a href="index.html">Sign up free</a> -->
             </div>
         </header>
         <section class="form">
             <form action="Login">
                 <div class="btn">
-                    <a href="/home-note/layout.html" class="create-btn3">Continue to Login →</a>
+                    <a href="./login.html" class="create-btn3">Continue to Login →</a>
                 </div>
             </form>
         </section>
     </main>
+    <script>
+    const params = new URLSearchParams(window.location.search);
+    const name = params.get("name");
+    const businessName = params.get("businessName");
+    document.querySelector("#username").textContent = name || "User";
+    document.querySelector("#businessName").textContent = businessName;
+</script>
 </body>
 </html>

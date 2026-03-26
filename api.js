@@ -16,13 +16,13 @@ const api = async (endpoint, method = "GET", body = null, token = null) => {
     }
 
     const res = await fetch(`${BASE_URL}${endpoint}`, options);
-    const data = await res.text();
+    const parsed = await res.json(); // parse JSON directly
 
     if (!res.ok) {
-        throw new Error(data.message || "Something went wrong");
+        throw new Error(parsed.message || "Something went wrong");
     }
 
-    return data;
+    return parsed;
 };
 
 export default api;
