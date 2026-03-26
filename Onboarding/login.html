@@ -48,21 +48,22 @@
             </div>
         </header>
         <section class="form">
-            <form action="Login">
+            <p id="login-feedback" style="color: red;"></p>
+            <form id="login-form">
                 <div class="password-field">
                     <div class="login-details">
                         <label for="email">Email Address</label>
-                        <input type="email" placeholder="Enter your email address" class="login-input">
-                        <!-- <p>We’ll send a reset link to this email</p> -->
+                        <input type="email" name="email" placeholder="Enter your email address" class="login-input" required>
+                        <!-- <p>We'll send a reset link to this email</p> -->
                     </div>
                     <div class="login-details">
                         <label for="password">Password</label>
-                        <input type="password" placeholder="Enter your password" class="login-input">
+                        <input type="password" name="password" placeholder="Enter your password" class="login-input" required>
                         <a href="forgot-password.html">Forgot your password?</a>
                     </div>
                 </div>
                 <div class="btn">
-                    <a href="/home-note/layout.html" class="create-btn">Log In to Bizpal</a>
+                    <button type="submit" class="create-btn">Log In to Bizpal</button>
                     <div class="line">
                         <hr>
                         <p>OR</p>

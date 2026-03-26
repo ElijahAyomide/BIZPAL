@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Track a Lead | BizPal</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/Dashboard/other-pages/layout.css" />
+    <script src="/Dashboard/other-pages/layout.js"></script>
+  </head>
+
+  <body class="create-lead-screen">
+    <div class="container">
+      <div class="side-container">
+        <!-- Left Sidebar -->
+        <aside class="sidebar1">
+          <div class="nickname">
+            <div class="icon-wrapper">
+              <span class="initials">CE</span>
+            </div>
+          </div>
+          <div class="shop-name">
+            <h1>Chidi's</h1>
+            <p>Electronics</p>
+          </div>
+        </aside>
+
+        <!-- Left Sidebar -->
+        <aside class="sidebar2">
+          <nav>
+            <ul class="nav-links">
+              <li class="dashboard">
+                <a class="other-link" href="/Dashboard/dashboard.html">
+                  <img src="Layout icons/Dashboard.svg" alt="Dashboard icon" />
+                  Dashboard
+                </a>
+              </li>
+              <li>
+                <a
+                  class="other-link"
+                  href="/Dashboard/other-pages/customer.html"
+                >
+                  <img src="Layout icons/Customer.svg" alt="Customers icon" />
+                  Customers
+                </a>
+              </li>
+              <li>
+                <a class="main-link" href="/Dashboard/other-pages/leads.html">
+                  <img src="Layout icons/Lead.svg" alt="Lead Pipeline icon" />
+                  Lead Pipeline
+                </a>
+              </li>
+              <li>
+                <a class="other-link" href="/Dashboard/other-pages/notes.html">
+                  <img
+                    class="note-icon"
+                    src="Layout icons/notes.svg"
+                    alt="Notes icon"
+                  />
+                  Notes
+                </a>
+              </li>
+              <li>
+                <a
+                  class="other-link"
+                  href="/Dashboard/other-pages/followups.html"
+                >
+                  <img
+                    src="Layout icons/Follow-ups.svg"
+                    alt="Follow-ups icon"
+                  />
+                  Follow-ups
+                </a>
+              </li>
+              <li class="report">
+                <a class="other-link" href="/Dashboard/other-pages/reports.html"
+                  >REPORTS</a
+                >
+              </li>
+              <li>
+                <a
+                  class="other-link"
+                  href="/Dashboard/other-pages/analytics.html"
+                >
+                  <img
+                    src="Layout icons/carbon_analytics.svg"
+                    alt="Analytics icon"
+                  />
+                  Analytics
+                </a>
+              </li>
+              <li>
+                <a
+                  class="other-link"
+                  href="/Dashboard/other-pages/settings.html"
+                >
+                  <img src="Layout icons/Settings.svg" alt="Settings icon" />
+                  Settings
+                </a>
+              </li>
+            </ul>
+          </nav>
+
+          <!-- profile picture upload control -->
+          <input type="file" id="profile-upload" accept="image/*" hidden />
+          <label for="profile-upload" class="profile-button">
+            <div class="profile-pic">
+              <img
+                id="profile-img"
+                src="Layout icons/Ellipse 13.svg"
+                alt="Profile Picture"
+              />
+              <span id="profile-initial" class="initial">C</span>
+            </div>
+            <div class="profile-info">
+              <h4>Chidi Okafor</h4>
+              <p>Admin</p>
+            </div>
+          </label>
+        </aside>
+      </div>
+
+      <main class="main create-lead-main">
+        <div class="create-lead-wrap">
+          <!-- Back button -->
+          <a class="create-lead-back" href="/Dashboard/other-pages/leads.html">
+            <span class="cl-back-icon"
+              ><i class="bx bx-left-arrow-alt"></i
+            ></span>
+            <span>Back to Pipeline</span>
+          </a>
+
+          <!-- Card -->
+          <section class="create-lead-card">
+            <!-- Heading -->
+            <div class="create-lead-heading">
+              <h1>Track a Lead</h1>
+              <p class="create-lead-subtitle">
+                Add lead details to follow the deal through your sales pipeline.
+              </p>
+            </div>
+
+            <p class="cl-required-fields">Required fields</p>
+
+            <form id="create-lead-form" novalidate>
+              <!-- CUSTOMER SECTION -->
+              <div class="cl-section-row">
+                <h2 class="cl-section-label">CUSTOMER</h2>
+                <span class="cl-section-line"></span>
+              </div>
+
+              <div class="cl-field-block">
+                <label class="cl-label" for="lead-customer-name"
+                  >Customer Name</label
+                >
+                <div class="cl-input-with-icon">
+                  <input
+                    id="lead-customer-name"
+                    name="customer_name"
+                    type="text"
+                    class="cl-input"
+                    placeholder="e.g. Adaeze Nwosu"
+                    list="lead-customers-list"
+                    autocomplete="off"
+                  />
+                  <span
+                    class="cl-input-check"
+                    id="name-check-icon"
+                    style="display: none"
+                  >
+                    <i class="bx bx-check"></i>
+                  </span>
+                </div>
+                <datalist id="lead-customers-list"></datalist>
+                <input type="hidden" id="lead-customer-id" name="customer_id" />
+                <p class="cl-prefill-note">
+                  Pre-filled from customer profile &middot;
+                  <a href="#" class="cl-change-link" id="change-customer-link"
+                    >Change customer</a
+                  >
+                </p>
+              </div>
+
+              <div class="cl-divider"></div>
+
+              <!-- LEAD DETAILS SECTION -->
+              <div class="cl-section-row">
+                <h2 class="cl-section-label">LEAD DETAILS</h2>
+                <span class="cl-section-line"></span>
+              </div>
+
+              <!-- Lead Status -->
+              <div class="cl-field-block">
+                <label class="cl-label">Lead Status</label>
+                <div class="cl-pill-group" id="lead-status-group">
+                  <button type="button" class="cl-pill" data-value="new">
+                    <span
+                      class="cl-status-dot"
+                      style="background: #7c3aed"
+                    ></span>
+                    New
+                  </button>
+                  <button
+                    type="button"
+                    class="cl-pill cl-pill-active"
+                    data-value="contacted"
+                  >
+                    <span
+                      class="cl-status-dot"
+                      style="background: #27ae60"
+                    ></span>
+                    Contacted
+                  </button>
+                  <button type="button" class="cl-pill" data-value="interested">
+                    <span
+                      class="cl-status-dot"
+                      style="background: #4a90d9"
+                    ></span>
+                    Interested
+                  </button>
+                  <button
+                    type="button"
+                    class="cl-pill"
+                    data-value="negotiating"
+                  >
+                    <span
+                      class="cl-status-dot"
+                      style="background: #c9a227"
+                    ></span>
+                    Negotiation
+                  </button>
+                  <button type="button" class="cl-pill" data-value="closed">
+                    <span class="cl-status-dot" style="background: #222"></span>
+                    Closed
+                  </button>
+                  <button type="button" class="cl-pill" data-value="lost">
+                    <span
+                      class="cl-status-dot"
+                      style="background: #c0392b"
+                    ></span>
+                    Lost
+                  </button>
+                </div>
+                <p class="cl-helper-text">
+                  Select the current stage of this lead
+                </p>
+                <input
+                  type="hidden"
+                  name="status"
+                  id="lead-status-value"
+                  value="contacted"
+                />
+              </div>
+
+              <!-- Lead Source -->
+              <div class="cl-field-block">
+                <label class="cl-label">Lead Source</label>
+                <div class="cl-pill-group" id="lead-source-group">
+                  <button type="button" class="cl-pill" data-value="walk-in">
+                    Walk-in
+                  </button>
+                  <button
+                    type="button"
+                    class="cl-pill cl-pill-active"
+                    data-value="referral"
+                  >
+                    Referral
+                  </button>
+                  <button type="button" class="cl-pill" data-value="whatsapp">
+                    Whatsapp
+                  </button>
+                  <button type="button" class="cl-pill" data-value="instagram">
+                    Instagram
+                  </button>
+                  <button type="button" class="cl-pill" data-value="phone-call">
+                    Phone call
+                  </button>
+                  <button type="button" class="cl-pill" data-value="other">
+                    Other
+                  </button>
+                </div>
+                <input
+                  type="hidden"
+                  name="lead_source"
+                  id="lead-source-value"
+                  value="referral"
+                />
+              </div>
+
+              <!-- Deal Value + Date -->
+              <div class="cl-two-col">
+                <div class="cl-field-block">
+                  <label class="cl-label" for="lead-deal-value"
+                    >Expected Deal Value</label
+                  >
+                  <div class="cl-currency-wrap">
+                    <span class="cl-currency-chip">&#8358;</span>
+                    <input
+                      id="lead-deal-value"
+                      name="deal_value"
+                      type="number"
+                      class="cl-input cl-currency-input"
+                      placeholder="e.g. 150,000"
+                      min="0"
+                    />
+                  </div>
+                </div>
+                <div class="cl-field-block">
+                  <label class="cl-label" for="lead-contacted-date"
+                    >First Contacted Date</label
+                  >
+                  <input
+                    id="lead-contacted-date"
+                    name="first_contacted_date"
+                    type="date"
+                    class="cl-input cl-date-input"
+                    placeholder="DD/MM/YY"
+                  />
+                </div>
+              </div>
+
+              <div class="cl-divider"></div>
+
+              <!-- NOTES SECTION -->
+              <div class="cl-section-row">
+                <h2 class="cl-section-label">NOTES</h2>
+                <span class="cl-section-line"></span>
+              </div>
+
+              <div class="cl-field-block">
+                <label class="cl-label" for="lead-notes">
+                  Notes <span class="cl-optional">(Optional)</span>
+                </label>
+                <textarea
+                  id="lead-notes"
+                  name="notes"
+                  class="cl-textarea"
+                  rows="4"
+                  placeholder="e.g. Adaeze runs a tailoring shop in Surulere. She's interested in the &#8358;150k package. Follow up after the weekend..."
+                ></textarea>
+              </div>
+
+              <!-- Feedback -->
+              <div
+                id="create-lead-feedback"
+                class="cl-feedback"
+                style="display: none"
+              ></div>
+
+              <!-- Submit -->
+              <button type="submit" class="cl-submit-btn" id="save-lead-btn">
+                Save Lead &rarr;
+              </button>
+            </form>
+          </section>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

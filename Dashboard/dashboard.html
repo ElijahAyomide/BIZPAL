@@ -126,7 +126,7 @@
 
         <div class="Lead-Dash total-customers">
           <h1>Total Customers</h1>
-          <p>+12 this month</p>
+          <p class="stat-value" id="total-customers-value">--</p>
           <div class="Lead-circle">
           </div>
         </div>
@@ -135,8 +135,8 @@
 
 
         <div class="Lead-Dash active-leads">
-          <h1>Active Leads</h1>
-          <p>+5 today</p>
+          <h1>Total Notes</h1>
+          <p class="stat-value" id="total-notes-value">--</p>
           <div class="Lead-circle">
           </div>
         </div>
@@ -145,8 +145,8 @@
 
 
         <div class="Lead-Dash deals-closed">
-          <h1>Deals Closed</h1>
-          <p>+15 today</p>
+          <h1>Pending Follow-Ups</h1>
+          <p class="stat-value" id="pending-followups-value">--</p>
           <div class="Lead-circle">
           </div>
         </div>
@@ -155,15 +155,14 @@
 
 
         <div class="Lead-Dash conversion">
-          <h1>Conversion</h1>
-          <div class="rate-section">
-            <img src="Layout icons/rate.svg" alt="Arrow Up Icon" />
-            <p>4% up</p>
-          </div>
+          <h1>Completed Follow-Ups</h1>
+          <p class="stat-value" id="completed-followups-value">--</p>
           <div class="Lead-circle">
           </div>
         </div>
       </div>
+
+      <p id="dashboard-feedback" class="dashboard-feedback"></p>
 
       <p class="Quick">Quick Actions</p>
 
@@ -181,6 +180,24 @@
           <h1>+ Log Note</h1>
         </div>
 
+      </div>
+
+      <div class="dashboard-lists">
+        <section class="list-card">
+          <div class="list-card-header">
+            <h2>Recent Activity</h2>
+          </div>
+          <ul id="recent-activity-list" class="data-list"></ul>
+          <p id="recent-activity-empty" class="empty-state hidden">No recent activity yet.</p>
+        </section>
+
+        <section class="list-card">
+          <div class="list-card-header">
+            <h2>Upcoming Follow-Ups</h2>
+          </div>
+          <ul id="upcoming-followups-list" class="data-list"></ul>
+          <p id="upcoming-followups-empty" class="empty-state hidden">No upcoming follow-ups.</p>
+        </section>
       </div>
 
 
@@ -207,6 +224,6 @@ hamburgerBtn.addEventListener('click', () => {
   sideContainer.classList.toggle('hidden');
 });
 </script> -->
-</body>
+ </body>
 
 </html>

@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BizPal</title>
+    <title>Customer Detail | BizPal</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
@@ -16,10 +16,9 @@
     <script src="/Dashboard/other-pages/layout.js"></script>
   </head>
 
-  <body class="customers-screen">
+  <body class="customer-detail-screen">
     <div class="container">
       <div class="side-container">
-        <!-- Left Sidebar -->
         <aside class="sidebar1">
           <div class="nickname">
             <div class="icon-wrapper">
@@ -32,7 +31,6 @@
           </div>
         </aside>
 
-        <!-- Left Sidebar -->
         <aside class="sidebar2">
           <nav>
             <ul class="nav-links">
@@ -62,7 +60,7 @@
                   <img
                     class="note-icon"
                     src="Layout icons/notes.svg"
-                    alt="Lead Pipeline icon"
+                    alt="Notes icon"
                   />
                   Notes
                 </a>
@@ -108,7 +106,6 @@
             </ul>
           </nav>
 
-          <!-- profile picture upload control -->
           <input type="file" id="profile-upload" accept="image/*" hidden />
           <label for="profile-upload" class="profile-button">
             <div class="profile-pic">
@@ -127,94 +124,107 @@
         </aside>
       </div>
 
-      <!-- Top Bar -->
-      <header class="topbar customers-topbar">
-        <h1>Customers</h1>
-
-        <div class="customers-topbar-actions">
-          <label class="search-shell" for="customers-search">
-            <i class="bx bx-search"></i>
-            <input
-              id="customers-search"
-              type="text"
-              placeholder="Search Customers...."
-            />
-          </label>
-          <button
-            class="notification-btn"
-            type="button"
-            aria-label="Notifications"
-          >
-            <i class="bx bx-bell"></i>
-          </button>
-        </div>
+      <header class="topbar detail-topbar">
+        <p class="detail-breadcrumb">
+          <a href="/Dashboard/other-pages/customer.html">← All customers</a>
+          <span>/</span>
+          <strong id="detail-breadcrumb-name">Customer</strong>
+        </p>
+        <button
+          type="button"
+          class="detail-notification-btn"
+          aria-label="Notifications"
+        >
+          <i class="bx bx-bell"></i>
+        </button>
       </header>
 
-      <!-- Main Content -->
-      <main class="main customers-main">
-        <section class="customers-summary-row">
-          <div>
-            <h2>All Customers</h2>
-            <p id="customers-summary-text">Loading customers...</p>
+      <main class="main detail-main" id="customer-detail-root">
+        <p id="detail-feedback" class="detail-feedback hidden"></p>
+
+        <section class="customer-hero-card">
+          <div class="customer-hero-left">
+            <div id="detail-avatar" class="customer-avatar">--</div>
+
+            <div class="customer-hero-text">
+              <h1 id="detail-name">Loading...</h1>
+              <p id="detail-subtitle">
+                Please wait while we fetch customer details.
+              </p>
+
+              <div class="hero-meta-row">
+                <span id="detail-phone" class="hero-chip dark">-</span>
+                <span id="detail-email" class="hero-chip dark">-</span>
+                <span id="detail-status-chip" class="hero-chip status"
+                  >New</span
+                >
+              </div>
+            </div>
           </div>
-          <button id="add-customer-btn" class="add-customer-btn" type="button">
-            + Add Customer
-          </button>
+
+          <div class="customer-hero-actions">
+            <button type="button" class="hero-btn edit">Edit</button>
+            <button type="button" class="hero-btn add-note">+ Add Note</button>
+          </div>
         </section>
 
-        <section class="customers-tabs" aria-label="Customer filters">
-          <button
-            class="tab-btn active"
-            type="button"
-            data-filter="all"
-            id="tab-all"
-          >
-            All (0)
-          </button>
-          <button
-            class="tab-btn"
-            type="button"
-            data-filter="active"
-            id="tab-active"
-          >
-            Active Leads (0)
-          </button>
-          <button
-            class="tab-btn"
-            type="button"
-            data-filter="closed"
-            id="tab-closed"
-          >
-            Closed (0)
-          </button>
+        <section class="detail-grid">
+          <article class="detail-card">
+            <h2>Contact Information</h2>
+            <div class="detail-row">
+              <span>Full Name</span><strong id="detail-full-name">-</strong>
+            </div>
+            <div class="detail-row">
+              <span>Phone</span><strong id="detail-phone-row">-</strong>
+            </div>
+            <div class="detail-row">
+              <span>Email</span><strong id="detail-email-row">-</strong>
+            </div>
+            <div class="detail-row">
+              <span>Business Type</span
+              ><strong id="detail-business-type">-</strong>
+            </div>
+            <div class="detail-row">
+              <span>Location</span><strong id="detail-location">-</strong>
+            </div>
+            <div class="detail-row">
+              <span>Added On</span><strong id="detail-added-on">-</strong>
+            </div>
+          </article>
+
+          <article class="detail-card">
+            <h2>Lead Summary</h2>
+            <div class="detail-row">
+              <span>Lead Status</span
+              ><strong id="detail-status-row" class="status-highlight"
+                >New</strong
+              >
+            </div>
+            <div class="detail-row">
+              <span>Deal Value</span><strong id="detail-deal-value">-</strong>
+            </div>
+            <div class="detail-row">
+              <span>Lead Source</span><strong id="detail-lead-source">-</strong>
+            </div>
+            <div class="detail-row">
+              <span>Days in Pipeline</span
+              ><strong id="detail-days-pipeline">-</strong>
+            </div>
+            <div class="detail-row">
+              <span>Next Follow-up</span
+              ><strong id="detail-next-followup">-</strong>
+            </div>
+            <div class="detail-row">
+              <span>Notes Count</span><strong id="detail-notes-count">-</strong>
+            </div>
+          </article>
         </section>
 
-        <section class="customers-table-card">
-          <div class="customers-table customers-table-head" role="row">
-            <span>CUSTOMERS</span>
-            <span>PHONE</span>
-            <span>LOCATION</span>
-            <span>LEAD STATUS</span>
-            <span>LAST CONTACT</span>
-            <span>ACTION</span>
-          </div>
-          <p id="customers-feedback" class="customers-feedback"></p>
-          <div id="customers-table-body"></div>
-          <p id="customers-empty-state" class="customers-empty-state hidden">
-            No customers found.
-          </p>
+        <section class="timeline-card">
+          <h2>Interaction Timeline</h2>
+          <div id="detail-timeline" class="timeline-list"></div>
         </section>
       </main>
     </div>
-
-    <!-- <script>
-const hamburgerBtn = document.getElementById('hamburger-btn');
-const sideContainer = document.querySelector('.side-container');
-
-hamburgerBtn.addEventListener('click', () => {
-  // Toggle sidebar for ALL screen sizes
-  sideContainer.classList.toggle('hidden');
-});
-</script> -->
   </body>
 </html>

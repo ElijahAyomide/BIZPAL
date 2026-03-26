@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Customer | BizPal</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/Dashboard/other-pages/layout.css" />
+    <script src="/Dashboard/other-pages/layout.js"></script>
+  </head>
+
+  <body class="create-customer-screen">
+    <main class="create-customer-wrap">
+      <a
+        class="create-customer-back"
+        href="/Dashboard/other-pages/customer.html"
+      >
+        <span class="back-icon"><i class="bx bx-left-arrow-alt"></i></span>
+        <span>Customers</span>
+      </a>
+
+      <section class="create-customer-card">
+        <div class="create-customer-heading">
+          <h1>Add New Customer</h1>
+          <p class="create-customer-subtitle">
+            Fill in the details below to save this customer.
+          </p>
+        </div>
+
+        <p class="required-fields">Required fields</p>
+
+        <form id="create-customer-form" class="create-customer-form" novalidate>
+          <div class="section-title-row">
+            <h2>BASIC INFORMATION</h2>
+            <span></span>
+          </div>
+
+          <div class="form-grid two-col">
+            <div class="field-block">
+              <label for="customer-name">Customer Name</label>
+              <input
+                id="customer-name"
+                name="name"
+                type="text"
+                placeholder="e.g. Chidi Okafor"
+                required
+              />
+            </div>
+
+            <div class="field-block">
+              <label for="customer-phone">Phone Number</label>
+              <div class="phone-input-wrap">
+                <span class="country-code"
+                  ><span class="flag-dot"></span>+234</span
+                >
+                <input
+                  id="customer-phone"
+                  name="phone"
+                  type="tel"
+                  placeholder="e.g. 0803 456 7890"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="field-block">
+              <label for="customer-email"
+                >Email Address <small>(Optional)</small></label
+              >
+              <input
+                id="customer-email"
+                name="email"
+                type="email"
+                placeholder="e.g. chidi@example.com"
+              />
+            </div>
+
+            <div class="field-block">
+              <label for="customer-business-type">Business Type</label>
+              <input
+                id="customer-business-type"
+                name="business_type"
+                type="text"
+                placeholder="e.g. Retail Shop"
+              />
+            </div>
+          </div>
+
+          <div class="field-block field-full">
+            <label for="customer-location">Location</label>
+            <input
+              id="customer-location"
+              name="location"
+              type="text"
+              placeholder="e.g. Yaba, Lagos"
+            />
+            <p class="field-help">
+              City or neighbourhood - helps you understand where your customers
+              come from
+            </p>
+          </div>
+
+          <div class="section-divider"></div>
+
+          <div class="section-title-row">
+            <h2>ADDITIONAL NOTE</h2>
+            <span></span>
+          </div>
+
+          <div class="field-block field-full">
+            <label for="customer-notes">Notes <small>(Optional)</small></label>
+            <textarea
+              id="customer-notes"
+              name="notes"
+              rows="4"
+              placeholder="e.g. Referred by Ngozi. Interested in the premium package. Prefers calls in the morning..."
+            ></textarea>
+          </div>
+
+          <p id="create-customer-feedback" class="form-feedback"></p>
+
+          <button
+            id="save-customer-btn"
+            class="save-customer-btn"
+            type="submit"
+          >
+            Save Customer ->
+          </button>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>

@@ -1,140 +1,341 @@
 <!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BizPal</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/Dashboard/other-pages/layout.css" />
+    <script src="/Dashboard/other-pages/layout.js"></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BizPal</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
-    rel="stylesheet">
-  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-  <link rel="stylesheet" href="/Dashboard/other-pages/layout.css">
-  <script src="/Dashboard/other-pages/layout.js"></script>
-</head>
-
-<body>
-  <div class="container">
-    <div class="side-container">
-      <!-- Left Sidebar -->
-      <aside class="sidebar1">
-        <div class="nickname">
-          <div class="icon-wrapper">
-            <span class="initials">CE</span>
+  <body class="leads-screen">
+    <div class="container">
+      <div class="side-container">
+        <!-- Left Sidebar -->
+        <aside class="sidebar1">
+          <div class="nickname">
+            <div class="icon-wrapper">
+              <span class="initials">CE</span>
+            </div>
           </div>
-        </div>
-        <div class="shop-name">
-          <h1>Chidi's</h1>
-          <p>Electronics</p>
-        </div>
-      </aside>
+          <div class="shop-name">
+            <h1>Chidi's</h1>
+            <p>Electronics</p>
+          </div>
+        </aside>
 
-      <!-- Left Sidebar -->
-      <aside class="sidebar2">
-        <nav>
-          <ul class="nav-links">
-            <li class="dashboard">
-              <a class="other-link" href="/Dashboard/dashboard.html">
-                <img src="Layout icons/Dashboard.svg" alt="Dashboard icon" />
-                Dashboard
-              </a>
-            </li>
-            <li>
-              <a class="other-link" href="/Dashboard/other-pages/customer.html">
-                <img src="Layout icons/Customer.svg" alt="Customers icon" />
-                Customers
-              </a>
-            </li>
-            <li>
-              <a class="main-link" href="/Dashboard/other-pages/leads.html">
-                <img src="Layout icons/Lead.svg" alt="Lead Pipeline icon" />
-                Lead Pipeline
-              </a>
-            </li>
+        <!-- Left Sidebar -->
+        <aside class="sidebar2">
+          <nav>
+            <ul class="nav-links">
+              <li class="dashboard">
+                <a class="other-link" href="/Dashboard/dashboard.html">
+                  <img src="Layout icons/Dashboard.svg" alt="Dashboard icon" />
+                  Dashboard
+                </a>
+              </li>
               <li>
-              <a class="other-link" href="/Dashboard/other-pages/notes.html">
-                <img class="note-icon" src="Layout icons/notes.svg" alt="Lead Pipeline icon" />
-               Notes
-              </a>
-            </li>
-            <li>
-              <a class="other-link" href="/Dashboard/other-pages/followups.html">
-                <img src="Layout icons/Follow-ups.svg" alt="Follow-ups icon" />
-                Follow-ups
-              </a>
-            </li>
-            <li class="report">
-              <a class="other-link" href="/Dashboard/other-pages/reports.html">REPORTS</a>
-            </li>
-            <li>
-              <a class="other-link" href="/Dashboard/other-pages/analytics.html">
-                <img src="Layout icons/carbon_analytics.svg" alt="Analytics icon" />
-                Analytics
-              </a>
-            </li>
-            <li>
-              <a class="other-link" href="/Dashboard/other-pages/settings.html">
-                <img src="Layout icons/Settings.svg" alt="Settings icon" />
-                Settings
-              </a>
-            </li>
-          </ul>
-        </nav>
+                <a
+                  class="other-link"
+                  href="/Dashboard/other-pages/customer.html"
+                >
+                  <img src="Layout icons/Customer.svg" alt="Customers icon" />
+                  Customers
+                </a>
+              </li>
+              <li>
+                <a class="main-link" href="/Dashboard/other-pages/leads.html">
+                  <img src="Layout icons/Lead.svg" alt="Lead Pipeline icon" />
+                  Lead Pipeline
+                </a>
+              </li>
+              <li>
+                <a class="other-link" href="/Dashboard/other-pages/notes.html">
+                  <img
+                    class="note-icon"
+                    src="Layout icons/notes.svg"
+                    alt="Lead Pipeline icon"
+                  />
+                  Notes
+                </a>
+              </li>
+              <li>
+                <a
+                  class="other-link"
+                  href="/Dashboard/other-pages/followups.html"
+                >
+                  <img
+                    src="Layout icons/Follow-ups.svg"
+                    alt="Follow-ups icon"
+                  />
+                  Follow-ups
+                </a>
+              </li>
+              <li class="report">
+                <a class="other-link" href="/Dashboard/other-pages/reports.html"
+                  >REPORTS</a
+                >
+              </li>
+              <li>
+                <a
+                  class="other-link"
+                  href="/Dashboard/other-pages/analytics.html"
+                >
+                  <img
+                    src="Layout icons/carbon_analytics.svg"
+                    alt="Analytics icon"
+                  />
+                  Analytics
+                </a>
+              </li>
+              <li>
+                <a
+                  class="other-link"
+                  href="/Dashboard/other-pages/settings.html"
+                >
+                  <img src="Layout icons/Settings.svg" alt="Settings icon" />
+                  Settings
+                </a>
+              </li>
+            </ul>
+          </nav>
 
-        <!-- profile picture upload control -->
-        <input type="file" id="profile-upload" accept="image/*" hidden />
-        <label for="profile-upload" class="profile-button">
-          <div class="profile-pic">
-            <img id="profile-img" src="Layout icons/Ellipse 13.svg" alt="Profile Picture" />
-            <span id="profile-initial" class="initial">C</span>
+          <!-- profile picture upload control -->
+          <input type="file" id="profile-upload" accept="image/*" hidden />
+          <label for="profile-upload" class="profile-button">
+            <div class="profile-pic">
+              <img
+                id="profile-img"
+                src="Layout icons/Ellipse 13.svg"
+                alt="Profile Picture"
+              />
+              <span id="profile-initial" class="initial">C</span>
+            </div>
+            <div class="profile-info">
+              <h4>Chidi Okafor</h4>
+              <p>Admin</p>
+            </div>
+          </label>
+        </aside>
+      </div>
+
+      <!-- Top Bar -->
+      <header class="topbar leads-topbar">
+        <h1 class="leads-page-title">Lead Pipeline</h1>
+        <div class="leads-topbar-actions">
+          <button class="leads-add-btn" id="add-lead-btn">+ Add Lead</button>
+          <button class="leads-export-btn" id="export-csv-btn">
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+              <polyline points="17 8 12 3 7 8" />
+              <line x1="12" y1="3" x2="12" y2="15" />
+            </svg>
+            Export CSV
+          </button>
+        </div>
+      </header>
+
+      <!-- Main Content -->
+      <main class="main leads-main">
+        <!-- Pipeline Grade Card -->
+        <div class="pipeline-grade-card">
+          <div class="grade-left">
+            <span class="grade-label-text">Pipeline Grade</span>
+            <span class="grade-badge" id="pipeline-grade">A GRADE</span>
           </div>
-          <div class="profile-info">
-            <h4>Chidi Okafor</h4>
-            <p>Admin</p>
+          <div class="grade-divider"></div>
+          <div class="grade-stats">
+            <div class="grade-stat">
+              <span class="grade-stat-value" id="total-leads-value">—</span>
+              <span class="grade-stat-label">Total Leads</span>
+            </div>
+            <div class="grade-stat">
+              <span class="grade-stat-value" id="closed-won-value">—</span>
+              <span class="grade-stat-label">Closed/Won</span>
+            </div>
+            <div class="grade-stat">
+              <span class="grade-stat-value" id="win-rate-value">—</span>
+              <span class="grade-stat-label">Win Rate</span>
+            </div>
+            <div class="grade-stat">
+              <span class="grade-stat-value gold" id="pipeline-value">—</span>
+              <span class="grade-stat-label">Pipeline Value</span>
+            </div>
           </div>
-        </label>
-      </aside>
+        </div>
+
+        <!-- Pipeline Stages -->
+        <div class="pipeline-stages-card" id="pipeline-stages-card">
+          <div class="stage-row" data-stage="new">
+            <span class="stage-dot" style="background: #4a90d9"></span>
+            <div class="stage-info">
+              <span class="stage-name">New Leads</span>
+              <span class="stage-desc">Just added to pipeline</span>
+            </div>
+            <div class="stage-bar-track">
+              <div
+                class="stage-bar-fill"
+                id="stage-new-fill"
+                style="width: 0%; background: #4a90d9"
+              ></div>
+              <span
+                class="stage-leads-pill"
+                id="stage-new-pill"
+                style="background: #4a90d9"
+                >0 Leads</span
+              >
+            </div>
+            <span class="stage-pct" id="stage-new-pct">0%</span>
+          </div>
+          <div class="stage-row" data-stage="contacted">
+            <span class="stage-dot" style="background: #27ae60"></span>
+            <div class="stage-info">
+              <span class="stage-name">Contacted</span>
+              <span class="stage-desc">Reached out awaiting response</span>
+            </div>
+            <div class="stage-bar-track">
+              <div
+                class="stage-bar-fill"
+                id="stage-contacted-fill"
+                style="width: 0%; background: #27ae60"
+              ></div>
+              <span
+                class="stage-leads-pill"
+                id="stage-contacted-pill"
+                style="background: #27ae60"
+                >0 Leads</span
+              >
+            </div>
+            <span class="stage-pct" id="stage-contacted-pct">0%</span>
+          </div>
+          <div class="stage-row" data-stage="interested">
+            <span class="stage-dot" style="background: #c9a227"></span>
+            <div class="stage-info">
+              <span class="stage-name">Interested</span>
+              <span class="stage-desc">Showing strong interest</span>
+            </div>
+            <div class="stage-bar-track">
+              <div
+                class="stage-bar-fill"
+                id="stage-interested-fill"
+                style="width: 0%; background: #c9a227"
+              ></div>
+              <span
+                class="stage-leads-pill"
+                id="stage-interested-pill"
+                style="background: #c9a227"
+                >0 Leads</span
+              >
+            </div>
+            <span class="stage-pct" id="stage-interested-pct">0%</span>
+          </div>
+          <div class="stage-row" data-stage="negotiating">
+            <span class="stage-dot" style="background: #8b1a4a"></span>
+            <div class="stage-info">
+              <span class="stage-name">Negotiating</span>
+              <span class="stage-desc">Discussing terms and pricing</span>
+            </div>
+            <div class="stage-bar-track">
+              <div
+                class="stage-bar-fill"
+                id="stage-negotiating-fill"
+                style="width: 0%; background: #8b1a4a"
+              ></div>
+              <span
+                class="stage-leads-pill"
+                id="stage-negotiating-pill"
+                style="background: #8b1a4a"
+                >0 Leads</span
+              >
+            </div>
+            <span class="stage-pct" id="stage-negotiating-pct">0%</span>
+          </div>
+          <div class="stage-row" data-stage="closed">
+            <span class="stage-dot" style="background: #00cc5a"></span>
+            <div class="stage-info">
+              <span class="stage-name">Closed / Won</span>
+              <span class="stage-desc">Deal successfully closed</span>
+            </div>
+            <div class="stage-bar-track">
+              <div
+                class="stage-bar-fill"
+                id="stage-closed-fill"
+                style="width: 0%; background: #00cc5a"
+              ></div>
+              <span
+                class="stage-leads-pill"
+                id="stage-closed-pill"
+                style="background: #00cc5a"
+                >0 Leads</span
+              >
+            </div>
+            <span class="stage-pct" id="stage-closed-pct">0%</span>
+          </div>
+          <div class="stage-row last-stage-row" data-stage="lost">
+            <span class="stage-dot" style="background: #8b0000"></span>
+            <div class="stage-info">
+              <span class="stage-name">Lost</span>
+              <span class="stage-desc">Did not convert</span>
+            </div>
+            <div class="stage-bar-track">
+              <div
+                class="stage-bar-fill"
+                id="stage-lost-fill"
+                style="width: 0%; background: #8b0000"
+              ></div>
+              <span
+                class="stage-leads-pill"
+                id="stage-lost-pill"
+                style="background: #8b0000"
+                >0 Leads</span
+              >
+            </div>
+            <span class="stage-pct lost-pct" id="stage-lost-pct">0%</span>
+          </div>
+        </div>
+
+        <!-- Lead Details Table -->
+        <div class="lead-details-section">
+          <div class="lead-details-header">
+            <span class="lead-details-title">Lead Details</span>
+            <a href="#" class="lead-view-all">View All &rarr;</a>
+          </div>
+          <div class="leads-table-wrap">
+            <table class="leads-table">
+              <thead>
+                <tr>
+                  <th>Lead Name</th>
+                  <th>Contact</th>
+                  <th>Stage</th>
+                  <th>Value</th>
+                  <th>Last Activity</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody id="leads-table-body"></tbody>
+            </table>
+          </div>
+          <p id="leads-feedback" class="customers-feedback hidden"></p>
+          <p id="leads-empty" class="customers-empty hidden">
+            No leads found yet.
+          </p>
+        </div>
+      </main>
     </div>
-
-    <!-- Top Bar -->
-    <header class="topbar">
-      <div class="topbar-left">
-        <div class="follow-reminder">
-          <div class="ham">
-        <!-- <button class="hamburger" id="hamburger-btn">&#9776;</button> -->
-        
-        <h1>Good morning, Chidi 👋</h1>
-        </div>
-        <p>Here’s what’s happening at your shop today</p>
-        
-        </div>
-      </div>
-
-      <div class="topbar-right">
-        <div class="date-box">
-          <img src="Layout icons/Calendar.svg" alt="Calendar Icon" />
-          <span id="current-date">Friday, Jun 13 2026</span>
-        </div>
-      </div>
-    </header>
-
-
-
-    <!-- Main Content -->
-    <main class="main">
-        
-    </main>
-
-</div>
-
-<!-- <script>
-const hamburgerBtn = document.getElementById('hamburger-btn');
-const sideContainer = document.querySelector('.side-container');
-
-hamburgerBtn.addEventListener('click', () => {
-  // Toggle sidebar for ALL screen sizes
-  sideContainer.classList.toggle('hidden');
-});
-</script> -->
-</body>
-
+  </body>
 </html>
